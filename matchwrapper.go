@@ -3,19 +3,16 @@ package ahocorasick
 // MatchWrapper contains all matched pattern in the input.
 type MatchWrapper struct {
 	total int
-	curr  int
 	match []*Match
 }
 
 func newMatchWrapper(matches []*Match) *MatchWrapper {
-	return &MatchWrapper{curr: 0, total: len(matches), match: matches}
+	return &MatchWrapper{total: len(matches), match: matches}
 }
 
-// NextString return next matched String
-func (m *MatchWrapper) NextString() []byte {
-	cur := m.curr
-	m.curr = m.curr + 1
-	return m.match[cur].match
+// GetMatch return  get the match at index
+func (m *MatchWrapper) GetMatch(index int) []byte {
+	return m.match[index].match
 }
 
 // TotalLength return total matched count
