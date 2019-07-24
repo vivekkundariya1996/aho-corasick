@@ -1,5 +1,9 @@
 package ahocorasick
 
+import (
+	"fmt"
+)
+
 // MatchWrapper contains all matched pattern in the input.
 type MatchWrapper struct {
 	total int
@@ -12,6 +16,7 @@ func newMatchWrapper(matches []*Match) *MatchWrapper {
 
 // GetMatch return  get the match at index
 func (m *MatchWrapper) GetMatch(index int) []byte {
+	fmt.Println("fetching index")
 	return m.match[index].match
 }
 
