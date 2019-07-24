@@ -76,13 +76,8 @@ func (tr *Trie) MatchFirst(input []byte) *Match {
 }
 
 // MatchString runs the Aho-Corasick string-search algorithm on a string input.
-func (tr *Trie) MatchString(input string) []string {
-	matches := tr.Match([]byte(input))
-	var lines []string
-	for _, match := range matches {
-		lines = append(lines, string(match.match))
-	}
-	return lines
+func (tr *Trie) MatchString(input string) *MatchWrapper {
+	return newMatchWrapper(tr.Match([]byte(input)))
 }
 
 // MatchFirstString is the same as MatchString, but returns after first successful match.
