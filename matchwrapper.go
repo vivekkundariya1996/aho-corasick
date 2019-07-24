@@ -14,9 +14,9 @@ func newMatchWrapper(matches []*Match) *MatchWrapper {
 	return &MatchWrapper{total: len(matches), match: matches}
 }
 
-// GetMatch return  get the match at index
-func (m *MatchWrapper) GetMatch(index int) []byte {
-	fmt.Println("fetching index")
+// GetString return  get the match at index
+func (m *MatchWrapper) GetString(index int) []byte {
+	fmt.Println("fetching index ", index)
 	return m.match[index].match
 }
 
