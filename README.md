@@ -1,5 +1,7 @@
 # Aho-Corasick
 
+This repository is fork of [BobuSumisu/aho-corasick](https://github.com/BobuSumisu/aho-corasick) to make some of the functionality JNI Binding available for android. All the credit for building this repository goes to [BobuSumisu](https://github.com/BobuSumisu) 
+
 [![Build Status](https://travis-ci.com/BobuSumisu/aho-corasick.svg?token=eGRFn5xdQ7p9yby3GVvc&branch=master)](https://travis-ci.com/BobuSumisu/aho-corasick)
 
 Implementation of the Aho-Corasick string-search algorithm in Go.
